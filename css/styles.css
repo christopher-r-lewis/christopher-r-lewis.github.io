@@ -684,6 +684,10 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
+.project-feature + .project-feature {
+  margin-top: 1.5rem;
+}
+
 .project-visual {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -752,6 +756,83 @@ a:hover {
   font-size: 0.72rem;
 }
 
+.visual-result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 0;
+  padding: 1.15rem 1rem 0.85rem;
+}
+
+.visual-result-kicker {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.visual-result-from {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 1.15rem;
+}
+
+.visual-result-arrow {
+  margin: 0.15rem 0 0.1rem;
+  color: var(--teal);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.visual-result-to {
+  margin: 0;
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: clamp(1.55rem, 2.6vw, 2.05rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.visual-result-note {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.visual-flow {
+  display: grid;
+  gap: 0.55rem;
+  width: 100%;
+  margin: auto 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.visual-flow li {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.visual-flow strong {
+  font-family: var(--serif);
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.visual-flow span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
 .project-story {
   align-self: center;
   padding: clamp(2rem, 5vw, 3.5rem);
@@ -767,7 +848,8 @@ a:hover {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 600;
   letter-spacing: -0.03em;
-  line-height: 1.05;
+  line-height: 1.12;
+  overflow-wrap: break-word;
 }
 
 .project-index {
@@ -1063,6 +1145,23 @@ a:hover {
   color: var(--muted);
 }
 
+.project-narrative .result-callout h4 {
+  color: var(--teal);
+}
+
+.project-narrative .result-callout p:first-of-type {
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.project-narrative .result-note {
+  margin-top: 0.4rem;
+  font-size: 0.88rem;
+}
+
 .responsibility-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1325,6 +1424,10 @@ a:hover {
     min-height: 0;
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .visual-result {
+    padding: 1.1rem 0.85rem 0.85rem;
   }
 
   .toolkit-layout {
