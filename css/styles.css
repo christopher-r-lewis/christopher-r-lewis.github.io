@@ -758,10 +758,7 @@ a:hover {
 }
 
 .project-title-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
+  display: block;
 }
 
 .project-title-row h3 {
@@ -781,11 +778,23 @@ a:hover {
 }
 
 .status-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35em 0.5em;
   margin-bottom: 0.65rem;
   padding: 0;
   color: var(--teal);
   background: transparent;
   letter-spacing: 0.11em;
+}
+
+.status-label span {
+  white-space: nowrap;
+}
+
+.status-sep {
+  letter-spacing: 0;
 }
 
 .project-summary {
@@ -1062,6 +1071,9 @@ a:hover {
 }
 
 .responsibility-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding-top: 1.35rem;
   border-top: 2px solid var(--line);
 }
@@ -1088,13 +1100,41 @@ a:hover {
   color: var(--muted);
 }
 
+.responsibility-stats,
+.responsibility-notes {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
 .responsibility-stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
-  margin: 1.2rem 0 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--line);
+}
+
+.responsibility-notes {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.responsibility-notes div {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.responsibility-notes dt {
+  color: var(--teal);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.responsibility-notes dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
 .responsibility-stats div {
